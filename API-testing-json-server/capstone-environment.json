@@ -1,0 +1,33 @@
+{
+	"id": "b87ed746-3135-495a-b309-aa26554831d9",
+	"name": "capstone-api-testing",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "text",
+			"enabled": true
+		},
+		{
+			"key": "userId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "productId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "orderId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-05-22T22:42:13.875Z",
+	"_postman_exported_using": "Postman/11.42.1"
+}

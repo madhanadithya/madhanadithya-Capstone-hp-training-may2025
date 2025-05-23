@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "madhan",
+      "email": "madhan@gmail.com",
+      "phone": "6473808532",
+      "address": "Coimbatore"
+    },
+    {
+      "id": "2",
+      "name": "Aadhi",
+      "email": "aadhi@example.com",
+      "phone": "9123456780",
+      "address": "Coimbatore"
+    },
+    {
+      "id": "3",
+      "name": "Aswath",
+      "email": "aswath@gmail.com",
+      "phone": "8883010615",
+      "address": "Salem"
+    },
+    {
+      "id": "4",
+      "name": "Keerthy",
+      "email": "keerthy@gmail.com",
+      "phone": "6787991234",
+      "address": "Coimbatore"
+    },
+    {
+      "id": "5",
+      "name": "raji",
+      "email": "raji@gmail.com",
+      "phone": "9877991234",
+      "address": "bangalore"
+    },
+    {
+      "id": "6",
+      "name": "murugesan",
+      "email": "murugesan@gmail.com",
+      "phone": "8977991234",
+      "address": "bangalore"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Banana",
+      "price": 10,
+      "category": "Fruits",
+      "inStock": true
+    },
+    {
+      "id": "2",
+      "name": "Apple",
+      "price": 20,
+      "category": "Fruits",
+      "inStock": false
+    },
+    {
+      "id": "3",
+      "name": "Milk",
+      "price": 30,
+      "category": "Dairy",
+      "inStock": true
+    },
+    {
+      "id": "4",
+      "name": "Smart Phone",
+      "price": 28000,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": "5",
+      "name": "t-shirt",
+      "price": 500,
+      "category": "clothes",
+      "inStock": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "orderDate": "2025-05-23",
+      "status": "Delivered"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "productId": 3,
+      "quantity": 1,
+      "orderDate": "2025-05-22",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "userId": 4,
+      "productId": 3,
+      "quantity": 2,
+      "orderDate": "2025-05-23",
+      "status": "Delivered"
+    },
+    {
+      "id": "4",
+      "userId": 6,
+      "productId": 5,
+      "quantity": 2,
+      "orderDate": "2025-05-24",
+      "status": "Shipped"
+    }
+  ]
+}
