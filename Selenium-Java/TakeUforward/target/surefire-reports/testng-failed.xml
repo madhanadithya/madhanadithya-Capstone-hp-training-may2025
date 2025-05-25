@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" verbose="0">
+  <listeners>
+    <listener class-name="utils.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="closeApp"/>
+          <include name="closeModalIfPresent"/>
+          <include name="setupReport"/>
+          <include name="validLoginTest"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
+      <class name="tests.ProfilePageTest">
+        <methods>
+          <include name="editProfileTest"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+          <include name="loginBeforeProfileTests"/>
+          <include name="closeModalAndFlush"/>
+        </methods>
+      </class> <!-- tests.ProfilePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

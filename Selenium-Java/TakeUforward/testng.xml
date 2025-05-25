@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" verbose="1" parallel="false">
+  <listeners>
+    <listener class-name="utils.RetryListener"/>
+  </listeners>
+
+  <test name="Test">
+    <classes>
+      <class name="tests.LoginPageTest"/>
+      <class name="tests.ProfilePageTest"/>
+      <class name="tests.SearchAndFilterTest"/>
+    </classes>
+  </test>
+</suite>
+
+

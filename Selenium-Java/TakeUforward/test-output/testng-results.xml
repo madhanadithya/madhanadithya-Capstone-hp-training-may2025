@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-26T01:38:17 IST" name="Suite" finished-at="2025-05-26T01:39:31 IST" duration-ms="74592">
+    <groups>
+      <group name="filter">
+        <method signature="SearchAndFilterTest.filterTest()[pri:6, instance:tests.SearchAndFilterTest@6c779568]" name="filterTest" class="tests.SearchAndFilterTest"/>
+      </group> <!-- filter -->
+      <group name="negative">
+        <method signature="LoginPageTest.invalidLoginTest()[pri:1, instance:tests.LoginPageTest@1fb700ee]" name="invalidLoginTest" class="tests.LoginPageTest"/>
+      </group> <!-- negative -->
+      <group name="search">
+        <method signature="SearchAndFilterTest.searchTest()[pri:5, instance:tests.SearchAndFilterTest@6c779568]" name="searchTest" class="tests.SearchAndFilterTest"/>
+      </group> <!-- search -->
+      <group name="profile">
+        <method signature="ProfilePageTest.editProfileTest()[pri:3, instance:tests.ProfilePageTest@6f27a732]" name="editProfileTest" class="tests.ProfilePageTest"/>
+        <method signature="ProfilePageTest.verifyProfileLinksTest()[pri:4, instance:tests.ProfilePageTest@6f27a732]" name="verifyProfileLinksTest" class="tests.ProfilePageTest"/>
+      </group> <!-- profile -->
+      <group name="positive">
+        <method signature="LoginPageTest.validLoginTest()[pri:2, instance:tests.LoginPageTest@1fb700ee]" name="validLoginTest" class="tests.LoginPageTest"/>
+        <method signature="ProfilePageTest.editProfileTest()[pri:3, instance:tests.ProfilePageTest@6f27a732]" name="editProfileTest" class="tests.ProfilePageTest"/>
+        <method signature="ProfilePageTest.verifyProfileLinksTest()[pri:4, instance:tests.ProfilePageTest@6f27a732]" name="verifyProfileLinksTest" class="tests.ProfilePageTest"/>
+        <method signature="SearchAndFilterTest.searchTest()[pri:5, instance:tests.SearchAndFilterTest@6c779568]" name="searchTest" class="tests.SearchAndFilterTest"/>
+        <method signature="SearchAndFilterTest.filterTest()[pri:6, instance:tests.SearchAndFilterTest@6c779568]" name="filterTest" class="tests.SearchAndFilterTest"/>
+      </group> <!-- positive -->
+      <group name="login">
+        <method signature="LoginPageTest.validLoginTest()[pri:2, instance:tests.LoginPageTest@1fb700ee]" name="validLoginTest" class="tests.LoginPageTest"/>
+        <method signature="LoginPageTest.invalidLoginTest()[pri:1, instance:tests.LoginPageTest@1fb700ee]" name="invalidLoginTest" class="tests.LoginPageTest"/>
+      </group> <!-- login -->
+      <group name="verification">
+        <method signature="ProfilePageTest.verifyProfileLinksTest()[pri:4, instance:tests.ProfilePageTest@6f27a732]" name="verifyProfileLinksTest" class="tests.ProfilePageTest"/>
+      </group> <!-- verification -->
+    </groups>
+    <test started-at="2025-05-26T01:38:17 IST" name="Test" finished-at="2025-05-26T01:39:31 IST" duration-ms="74592">
+      <class name="tests.SearchAndFilterTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.SearchAndFilterTest@6c779568]" started-at="2025-05-26T01:39:09 IST" name="setupReport" finished-at="2025-05-26T01:39:14 IST" duration-ms="5353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method signature="searchTest()[pri:5, instance:tests.SearchAndFilterTest@6c779568]" started-at="2025-05-26T01:39:14 IST" name="searchTest" finished-at="2025-05-26T01:39:24 IST" duration-ms="9932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method is-config="true" signature="closeModalIfPresent()[pri:0, instance:tests.SearchAndFilterTest@6c779568]" started-at="2025-05-26T01:39:24 IST" name="closeModalIfPresent" finished-at="2025-05-26T01:39:25 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalIfPresent -->
+        <test-method signature="filterTest()[pri:6, instance:tests.SearchAndFilterTest@6c779568]" started-at="2025-05-26T01:39:25 IST" name="filterTest" finished-at="2025-05-26T01:39:31 IST" duration-ms="6778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterTest -->
+        <test-method is-config="true" signature="closeModalIfPresent()[pri:0, instance:tests.SearchAndFilterTest@6c779568]" started-at="2025-05-26T01:39:31 IST" name="closeModalIfPresent" finished-at="2025-05-26T01:39:31 IST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalIfPresent -->
+      </class> <!-- tests.SearchAndFilterTest -->
+      <class name="tests.ProfilePageTest">
+        <test-method is-config="true" signature="loginBeforeProfileTests()[pri:0, instance:tests.ProfilePageTest@6f27a732]" started-at="2025-05-26T01:38:32 IST" name="loginBeforeProfileTests" finished-at="2025-05-26T01:38:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeProfileTests -->
+        <test-method signature="editProfileTest()[pri:3, instance:tests.ProfilePageTest@6f27a732]" started-at="2025-05-26T01:38:32 IST" name="editProfileTest" finished-at="2025-05-26T01:38:52 IST" depends-on-methods="tests.LoginPageTest.validLoginTest" duration-ms="19589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editProfileTest -->
+        <test-method is-config="true" signature="closeModalAndFlush()[pri:0, instance:tests.ProfilePageTest@6f27a732]" started-at="2025-05-26T01:38:52 IST" name="closeModalAndFlush" finished-at="2025-05-26T01:38:52 IST" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalAndFlush -->
+        <test-method signature="verifyProfileLinksTest()[pri:4, instance:tests.ProfilePageTest@6f27a732]" started-at="2025-05-26T01:38:52 IST" name="verifyProfileLinksTest" finished-at="2025-05-26T01:39:09 IST" depends-on-methods="tests.ProfilePageTest.editProfileTest" duration-ms="16954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProfileLinksTest -->
+        <test-method is-config="true" signature="closeModalAndFlush()[pri:0, instance:tests.ProfilePageTest@6f27a732]" started-at="2025-05-26T01:39:09 IST" name="closeModalAndFlush" finished-at="2025-05-26T01:39:09 IST" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalAndFlush -->
+      </class> <!-- tests.ProfilePageTest -->
+      <class name="tests.LoginPageTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:37:58 IST" name="launchApp" finished-at="2025-05-26T01:38:17 IST" duration-ms="18393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:38:17 IST" name="setupReport" finished-at="2025-05-26T01:38:18 IST" duration-ms="1281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method signature="invalidLoginTest()[pri:1, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:38:18 IST" name="invalidLoginTest" finished-at="2025-05-26T01:38:25 IST" duration-ms="6328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="closeModalIfPresent()[pri:0, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:38:25 IST" name="closeModalIfPresent" finished-at="2025-05-26T01:38:25 IST" duration-ms="799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalIfPresent -->
+        <test-method signature="validLoginTest()[pri:2, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:38:25 IST" name="validLoginTest" finished-at="2025-05-26T01:38:32 IST" duration-ms="6735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="closeModalIfPresent()[pri:0, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:38:32 IST" name="closeModalIfPresent" finished-at="2025-05-26T01:38:32 IST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeModalIfPresent -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginPageTest@1fb700ee]" started-at="2025-05-26T01:39:32 IST" name="closeApp" finished-at="2025-05-26T01:39:43 IST" duration-ms="10988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- tests.LoginPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
