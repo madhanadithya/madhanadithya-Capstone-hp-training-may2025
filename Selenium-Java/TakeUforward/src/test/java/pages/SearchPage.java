@@ -24,10 +24,6 @@ public class SearchPage {
     @FindBy(xpath = "//p[contains(@class, 'font-medium') and contains(text(), \"Striver's DSA Sheet\")]")
     WebElement targetedSheetbtn;
     
-//    @FindBy(xpath = "//*[name()='svg']/*[name()='path'][@fill='#919EAB']")
-//    WebElement searchInput;
-    
-    
     @FindBy(xpath = "//button[contains(@class, 'w-9') and contains(@class, 'rounded-md') and .//*[name()='svg']]")
     WebElement searchInput;
     
@@ -83,9 +79,11 @@ public class SearchPage {
 
         driver.get("https://takeuforward.org/");
 
-
+    	
+        Helper.pause(2000);
         waitHelper.waitForElementToBeClickable(resourceBtn);
         Helper.clickUsingJS(driver, resourceBtn);
+        Helper.pause(1000);
 
         waitHelper.waitForElementToBeClickable(targetedSheetbtn);
         Helper.clickUsingJS(driver, targetedSheetbtn);
@@ -99,11 +97,11 @@ public class SearchPage {
         Helper.scrollToElement(driver, searchInput);
         Helper.clickUsingJS(driver, searchInput);
 
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(searchIconBtn).click().perform();
 
         waitHelper.waitForInputFieldToBeReady(searchBar);
 
+    	
+        Helper.pause(3000);
         searchBar.clear();
         searchBar.sendKeys(keyword1);
 
@@ -112,7 +110,7 @@ public class SearchPage {
         searchBar.clear();
         searchBar.sendKeys(keyword2);
 
-        Helper.captureScreenshot(driver, "Search_" + keyword1 + "_" + keyword2);
+//        Helper.captureScreenshot(driver, "Search_" + keyword1 + "_" + keyword2);
     }
 
     public String applyFilter(String difficultLevel) {
@@ -141,7 +139,7 @@ public class SearchPage {
 
         Helper.pause(4000);
 
-        Helper.captureScreenshot(driver, "FilterApplied_" + difficultLevel);
+//        Helper.captureScreenshot(driver, "FilterApplied_" + difficultLevel);
 
         return Helper.getDirectTextContent(driver, difficultyStatus);
     }

@@ -1,20 +1,22 @@
 package tests;
 
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
-import pages.LoginPage;
-import utils.Constant;
-import utils.Helper;
-import utils.ExtentManager;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
+import base.BaseTest;
+import pages.LoginPage;
+import utils.ExcelUtils;
+import utils.ExtentManager;
+import utils.Helper;
 
 public class LoginPageTest extends BaseTest {
     Logger log = Logger.getLogger(LoginPageTest.class);
@@ -30,6 +32,7 @@ public class LoginPageTest extends BaseTest {
     private void performLoginTest(String email, String password, String expectedToastMessage, boolean expectGreeting) {
         test = extent.createTest((expectGreeting ? "TC_02 : " : "TC_01 : ") + "Login Test - " + (expectGreeting ? "Valid" : "Invalid") + " Credentials");
 
+        
         try {
         	
             LoginPage lp = new LoginPage(getDriver());
@@ -71,13 +74,29 @@ public class LoginPageTest extends BaseTest {
     @Test(priority = 1, groups = { "login", "negative" })
     public void invalidLoginTest() {
         log.info("===============login with invalid credentials===============");
-        performLoginTest(Constant.email_id, Constant.invalid_password, "Invalid Password", false);
+        
+        
+        //using Constant file
+//        performLoginTest(Constant.email_id, Constant.invalid_password, "Invalid Password", false);
+        
+        //using Data Driven Method
+        Map<String, String> data = ExcelUtils.getTestData("Login", "TC_01");
+        performLoginTest(data.get("email"), data.get("password"), data.get("expectedToast"), false);
+
     }
 
     @Test(priority = 2, groups = { "login", "positive" })
     public void validLoginTest() {
         log.info("===============login with valid credentials===============");
-        performLoginTest(Constant.email_id, Constant.password, "Login Successful", true);
+        
+        
+        //using Constant file
+//        performLoginTest(Constant.email_id, Constant.password, "Login Successful", true);
+        
+        //using Data Driven Method
+        Map<String, String> data = ExcelUtils.getTestData("Login", "TC_02");
+        performLoginTest(data.get("email"), data.get("password"), data.get("expectedToast"), true);
+
     }
 
     @AfterMethod(alwaysRun = true)

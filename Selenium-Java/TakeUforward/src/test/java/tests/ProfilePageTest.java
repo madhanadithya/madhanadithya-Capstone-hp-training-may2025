@@ -1,5 +1,7 @@
 package tests;
 
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +15,7 @@ import com.aventstack.extentreports.Status;
 import base.BaseTest;
 import pages.ProfilePage;
 import utils.Constant;
+import utils.ExcelUtils;
 import utils.ExtentManager;
 import utils.Helper;
 
@@ -29,9 +32,6 @@ public class ProfilePageTest extends BaseTest {
         extent = ExtentManager.getInstance();
     }
 
-    
-    
-
     @Test(priority = 3, dependsOnMethods = {"tests.LoginPageTest.validLoginTest"}, groups = {"profile", "positive"})
     public void editProfileTest() throws Exception {
     	
@@ -46,28 +46,51 @@ public class ProfilePageTest extends BaseTest {
             // Log personal info update
             log.info("Updating personal data: name, location, college");
             test.log(Status.INFO, "Updating personal data");
+            
+            
+            
+            //using Constant file
 
-            profilePage.editPersonalData(
-                    Constant.profile_name,
-                    Constant.profile_location,
-                    Constant.profile_college
-            );
+//            profilePage.editPersonalData(
+//                    Constant.profile_name,
+//                    Constant.profile_location,
+//                    Constant.profile_college
+//            );
+//
+//            // Log social links update
+//            log.info("Updating social links: GitHub, LinkedIn, Twitter, Other");
+//            test.log(Status.INFO, "Updating social links");
+//            
+//            profilePage.editSocialLinks(
+//                    Constant.github_link,
+//                    Constant.linkedin_link,
+//                    Constant.twitter_link,
+//                    Constant.other_link
+//            );
+
+            
+            
+            
+            //using Data Driven method
+            
+            Map<String, String> data = ExcelUtils.getTestData("Profile", "TC_03");
+
+            profilePage.editPersonalData(data.get("name"), data.get("location"), data.get("college"));
 
             // Log social links update
             log.info("Updating social links: GitHub, LinkedIn, Twitter, Other");
             test.log(Status.INFO, "Updating social links");
+            
+            profilePage.editSocialLinks(data.get("github"), data.get("linkedin"), data.get("twitter"), data.get("other"));
 
-            profilePage.editSocialLinks(
-                    Constant.github_link,
-                    Constant.linkedin_link,
-                    Constant.twitter_link,
-                    Constant.other_link
-            );
-
+            
+            
+            
             profilePage.returnToProfileView();
             
             test.log(Status.PASS, "Profile updated successfully!");
-            log.info("Profile updated successfully!");
+            log.info("Profile updated successfully, As expected test passed!!");
+
 
         } catch (Exception e) {
             Helper.captureScreenshot(getDriver(), "editProfileTestFailure");
@@ -88,32 +111,35 @@ public class ProfilePageTest extends BaseTest {
         test = extent.createTest("TC_04 : Verify Profile Social Links Open Correct URLs");
 
         try {
-            log.info("=============== Verifying social links URLs ===============");
+            log.info("=============== Verifying Display Name ===============");
             test.log(Status.INFO, "Verifying GitHub and LinkedIn URLs");
 
             ProfilePage profilePage = new ProfilePage(getDriver());
-
-            
+                  
+            Map<String, String> data = ExcelUtils.getTestData("Profile", "TC_03"); //with the help of ExcelUtils.java loading data form Excel.
+           
             //================ verify display name ===================================
             
-            String extractedName = profilePage.getDisplayedUserFullName();
+            String extractedName = profilePage.getDisplayedUserFullName(); // calling ProfilePage.java class to get the User name displayed in profile
             log.info("Name displayed in profile: " + extractedName);
             test.log(Status.INFO, "Name displayed in profile:" + extractedName);
             
-            Assert.assertEquals(extractedName, Constant.profile_name);
+//            Assert.assertEquals(extractedName, Constant.profile_name); //----> Using Constant.java file
+            Assert.assertEquals(extractedName, data.get("name"));  //----> Using Excel sheets - data driven approach
+            
             log.info("Profile name matches with data used to update!");
             test.log(Status.PASS, "Profile name matches with data used to update!");
-
-
+            
             //================ verify linked-in ===================================
             
+            log.info("=============== Verifying social links URLs ===============");
             String linkedinUrl = profilePage.verifyAndGetLinkedinUrl();
             
-            log.info("LinkedIn URL opened: " + linkedinUrl);
-            test.log(Status.INFO, "LinkedIn URL opened: " + linkedinUrl);
+            log.info("LinkedIn URL opened: " + linkedinUrl);   //--------------> using log4j logging the information. 
+            test.log(Status.INFO, "LinkedIn URL opened: " + linkedinUrl); //---> using extends-report logging the info in html report.
             
-            Assert.assertTrue(linkedinUrl.contains("linkedin.com"), "LinkedIn URL validation failed");
-            
+//            Assert.assertTrue(linkedinUrl.contains("linkedin.com"), "LinkedIn URL validation failed");
+            Assert.assertTrue(linkedinUrl.contains("linkedin.com"));
             
           //================ verify Github ===================================
             
@@ -122,11 +148,12 @@ public class ProfilePageTest extends BaseTest {
             log.info("GitHub URL opened: " + githubUrl);
             test.log(Status.INFO, "GitHub URL opened: " + githubUrl);
             
-            Assert.assertTrue(githubUrl.contains(Constant.github_link), "GitHub URL validation failed");
+//            Assert.assertTrue(githubUrl.contains(Constant.github_link), "GitHub URL validation failed");
+            Assert.assertTrue(githubUrl.contains(data.get("github")));
 
             test.log(Status.PASS, "Social links verified successfully!");
-            log.info("Social links verified successfully!");
-
+            log.info("Social links verified successfully, As expected test passed!");
+            
         } catch (Exception e) {
             Helper.captureScreenshot(getDriver(), "verifyProfileLinksTestFailure");
             test.log(Status.FAIL, "Verification test failed: " + e.getMessage());

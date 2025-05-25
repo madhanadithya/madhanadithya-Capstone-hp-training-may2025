@@ -3,8 +3,8 @@ package utils;
 public class Constant {
 	
 	//valid credentials
-	public static final String email_id="madhanadithya3@gmail.com";
-	public static final String password="Adit@2003";
+	public static final String email_id="capstonetestuser01@gmail.com";
+	public static final String password="password@1234";
 	
 	//invalid credentials
 	public static final String invalid_email_id="dummy.email@gmail.com";
@@ -21,7 +21,7 @@ public class Constant {
     //social links
     public static final String github_link = "https://github.com/madhanadithya/";
     public static final String linkedin_link = "https://www.linkedin.com/in/madhanadithya/";
-    public static final String twitter_link = "https://x.com/madhanadithya"; // voluntarily gave space to check the test
+    public static final String twitter_link = "https://x.com/madhanadithya"; 
     public static final String other_link = ""; // voluntarily gave empty string to check the test
     
    
@@ -29,6 +29,8 @@ public class Constant {
     public static final String searchKeyword1 = "The Celebrity Problem";
     public static final String searchKeyword2 = "Sort";
     public static final String difficultyLevel = "Hard";
+    
+    
 
 	
 }

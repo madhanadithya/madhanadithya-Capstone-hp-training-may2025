@@ -9,9 +9,10 @@
       <class name="tests.SearchAndFilterTest">
         <methods>
           <include name="closeApp"/>
+          <include name="filterTest"/>
           <include name="launchApp"/>
           <include name="setupReport"/>
-          <include name="searchTest"/>
+          <include name="closeModalIfPresent"/>
         </methods>
       </class> <!-- tests.SearchAndFilterTest -->
     </classes>

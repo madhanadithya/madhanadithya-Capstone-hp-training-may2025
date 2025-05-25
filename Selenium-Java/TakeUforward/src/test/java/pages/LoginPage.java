@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import tests.LoginPageTest;
-import utils.Helper;
 import utils.WaitHelper;
+import utils.Helper;
 
 public class LoginPage {
 

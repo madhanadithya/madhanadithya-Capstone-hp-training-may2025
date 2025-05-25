@@ -197,6 +197,7 @@ public class ProfilePage {
         }
 
         String url = driver.getCurrentUrl();
+//        Helper.pause(3000);
         driver.close();
         driver.switchTo().window(originalWindow);
 

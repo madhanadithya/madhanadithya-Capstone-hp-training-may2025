@@ -28,6 +28,7 @@ public class BaseTest {
         String browser = prop.getProperty("browser").toLowerCase();
         String mode = prop.getProperty("mode").toLowerCase();
 
+        
         switch (browser) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();

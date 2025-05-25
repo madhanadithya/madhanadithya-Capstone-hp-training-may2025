@@ -1,70 +1,32 @@
-2025-05-24 02:25:07,369 INFO  tests.LoginPageTest - ===============login with invalid credentials===============
-2025-05-24 02:25:07,510 INFO  tests.LoginPageTest - Opening login page...
-2025-05-24 02:25:12,821 INFO  tests.LoginPageTest - invalid credentials submitted.
-2025-05-24 02:25:15,021 INFO  tests.LoginPageTest - Captured Toast Message: Invalid Password
-2025-05-24 02:25:15,034 INFO  tests.LoginPageTest - As expected test passed!
-2025-05-24 02:25:16,303 INFO  tests.LoginPageTest - ===============login with valid credentials===============
-2025-05-24 02:25:16,306 INFO  tests.LoginPageTest - Opening login page...
-2025-05-24 02:25:19,400 INFO  tests.LoginPageTest - valid credentials submitted.
-2025-05-24 02:25:23,170 WARN  tests.LoginPageTest - Toast close button not available, Skipping toast close. Reason: stale element reference: stale element not found in the current frame
-  (Session info: chrome=136.0.7103.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [480b46f43116b36798cb19d54140abb8, clickElement {id=f.AA20E188D579DDA131669B445C1E0AAE.d.A689C6BCE603F1530BD38152B9C50A15.e.95}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\MADHAN~1.ADI\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62323/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (480b46f43116b36798cb19d54140abb8)] -> xpath: //button[@aria-label='Close notification']]
-Session ID: 480b46f43116b36798cb19d54140abb8
-2025-05-24 02:25:23,173 INFO  tests.LoginPageTest - Captured Toast Message: Login Successful
-2025-05-24 02:25:27,228 INFO  tests.LoginPageTest - Captured greeting Message: Hi, SSS
-2025-05-24 02:25:27,229 INFO  tests.LoginPageTest - Verified greeting message. Login successful!
-2025-05-24 02:25:27,230 INFO  tests.LoginPageTest - As expected test passed!
-2025-05-24 02:25:27,438 INFO  tests.ProfilePageTest - =============== Editing profile details ===============
-2025-05-24 02:25:27,465 INFO  tests.ProfilePageTest - Updating personal data: name, location, college
-2025-05-24 02:25:37,798 INFO  tests.ProfilePageTest - Updating social links: GitHub, LinkedIn, Twitter, Other
-2025-05-24 02:25:49,465 INFO  tests.ProfilePageTest - Profile updated successfully!
-2025-05-24 02:25:49,703 INFO  tests.ProfilePageTest - =============== Verifying social links URLs ===============
-2025-05-24 02:25:49,816 INFO  tests.ProfilePageTest - Name displayed in profile: Madhan Adithya
-2025-05-24 02:25:49,817 INFO  tests.ProfilePageTest - Profile name matches with data used to update!
-2025-05-24 02:25:53,536 INFO  tests.ProfilePageTest - LinkedIn URL opened: https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFkhITtRzKCbwAAAZb-7k-ox5EDj4SF8eZ3hFrO_cR__3d99U4DkrkQ-zefJOn-K5A04bW88eyDreYRw4h5ta1BtwPxPEeiC4ViChXc9WUopdUyQbKE5bEwrp5fMcI45noFKcI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmadhanadithya%2F
-2025-05-24 02:26:00,724 INFO  tests.ProfilePageTest - GitHub URL opened: https://github.com/madhanadithya/
-2025-05-24 02:26:00,726 INFO  tests.ProfilePageTest - Social links verified successfully!
-2025-05-24 02:26:00,939 INFO  tests.SearchAndFilterTest - Navigating to Striver's DSA sheet
-2025-05-24 02:26:05,385 INFO  tests.SearchAndFilterTest - =============== search functionality testing ===============
-2025-05-24 02:26:05,387 INFO  tests.SearchAndFilterTest - Performing search test
-2025-05-24 02:26:13,452 INFO  tests.SearchAndFilterTest - Search test completed successfully
-2025-05-24 02:26:13,472 INFO  tests.SearchAndFilterTest - =============== filter functionality testing ===============
-2025-05-24 02:26:13,473 INFO  tests.SearchAndFilterTest - Applying difficulty filter
-2025-05-24 02:26:21,061 INFO  tests.SearchAndFilterTest - Filter result: Hard
-2025-05-24 02:26:21,062 INFO  tests.SearchAndFilterTest - Filter test passed
-2025-05-24 02:34:32,501 INFO  tests.LoginPageTest - ===============login with invalid credentials===============
-2025-05-24 02:34:32,601 INFO  tests.LoginPageTest - Opening login page...
-2025-05-24 02:34:36,894 INFO  tests.LoginPageTest - invalid credentials submitted.
-2025-05-24 02:34:39,694 INFO  tests.LoginPageTest - Captured Toast Message: Invalid Password
-2025-05-24 02:34:39,703 INFO  tests.LoginPageTest - As expected test passed!
-2025-05-24 02:34:41,005 INFO  tests.LoginPageTest - ===============login with valid credentials===============
-2025-05-24 02:34:41,009 INFO  tests.LoginPageTest - Opening login page...
-2025-05-24 02:34:44,019 INFO  tests.LoginPageTest - valid credentials submitted.
-2025-05-24 02:34:45,617 INFO  tests.LoginPageTest - Captured Toast Message: Login Successful
-2025-05-24 02:34:50,140 INFO  tests.LoginPageTest - Captured greeting Message: Hi, sss
-2025-05-24 02:34:50,141 INFO  tests.LoginPageTest - Verified greeting message. Login successful!
-2025-05-24 02:34:50,142 INFO  tests.LoginPageTest - As expected test passed!
-2025-05-24 02:34:50,349 INFO  tests.ProfilePageTest - =============== Editing profile details ===============
-2025-05-24 02:34:50,379 INFO  tests.ProfilePageTest - Updating personal data: name, location, college
-2025-05-24 02:35:01,292 INFO  tests.ProfilePageTest - Updating social links: GitHub, LinkedIn, Twitter, Other
-2025-05-24 02:35:12,266 INFO  tests.ProfilePageTest - Profile updated successfully!
-2025-05-24 02:35:12,507 INFO  tests.ProfilePageTest - =============== Verifying social links URLs ===============
-2025-05-24 02:35:12,643 INFO  tests.ProfilePageTest - Name displayed in profile: Madhan Adithya
-2025-05-24 02:35:12,644 INFO  tests.ProfilePageTest - Profile name matches with data used to update!
-2025-05-24 02:35:16,547 INFO  tests.ProfilePageTest - LinkedIn URL opened: https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGUiPyev7MQyQAAAZb-9ubgzc1Mf5yXwcP_cKwdDYakCRI1aqOHiaEWvK-gTlLyDzoBC-maMcTnNPxeHNpze2pRLhVaIzXlz_WVjKCTnEJnZyAZfwMquURdIUkbM_q9-wmnfPs=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmadhanadithya%2F
-2025-05-24 02:35:23,973 INFO  tests.ProfilePageTest - GitHub URL opened: https://github.com/madhanadithya/
-2025-05-24 02:35:23,975 INFO  tests.ProfilePageTest - Social links verified successfully!
-2025-05-24 02:35:24,230 INFO  tests.SearchAndFilterTest - Navigating to Striver's DSA sheet
-2025-05-24 02:35:28,706 INFO  tests.SearchAndFilterTest - =============== search functionality testing ===============
-2025-05-24 02:35:28,709 INFO  tests.SearchAndFilterTest - Performing search test
-2025-05-24 02:35:36,882 INFO  tests.SearchAndFilterTest - Search test completed successfully
-2025-05-24 02:35:37,160 INFO  tests.SearchAndFilterTest - =============== filter functionality testing ===============
-2025-05-24 02:35:37,161 INFO  tests.SearchAndFilterTest - Applying difficulty filter
-2025-05-24 02:35:44,350 INFO  tests.SearchAndFilterTest - Filter result: Hard
-2025-05-24 02:35:44,352 INFO  tests.SearchAndFilterTest - Filter test passed
+2025-05-26 02:25:12,125 INFO  tests.LoginPageTest - ===============login with invalid credentials===============
+2025-05-26 02:25:13,057 INFO  tests.LoginPageTest - Opening login page...
+2025-05-26 02:25:16,203 INFO  tests.LoginPageTest - invalid credentials submitted.
+2025-05-26 02:25:18,218 INFO  tests.LoginPageTest - Captured Toast Message: Invalid Password
+2025-05-26 02:25:18,223 INFO  tests.LoginPageTest - As expected test passed!
+2025-05-26 02:25:18,825 INFO  tests.LoginPageTest - ===============login with valid credentials===============
+2025-05-26 02:25:18,907 INFO  tests.LoginPageTest - Opening login page...
+2025-05-26 02:25:20,718 INFO  tests.LoginPageTest - valid credentials submitted.
+2025-05-26 02:25:21,916 INFO  tests.LoginPageTest - Captured Toast Message: Login Successful
+2025-05-26 02:25:25,609 INFO  tests.LoginPageTest - Captured greeting Message: Hi, CapstoneTestUser01
+2025-05-26 02:25:25,610 INFO  tests.LoginPageTest - Verified greeting message. Login successful!
+2025-05-26 02:25:25,610 INFO  tests.LoginPageTest - As expected test passed!
+2025-05-26 02:25:25,728 INFO  tests.ProfilePageTest - =============== Editing profile details ===============
+2025-05-26 02:25:25,734 INFO  tests.ProfilePageTest - Updating personal data: name, location, college
+2025-05-26 02:25:35,386 INFO  tests.ProfilePageTest - Updating social links: GitHub, LinkedIn, Twitter, Other
+2025-05-26 02:25:44,436 INFO  tests.ProfilePageTest - Profile updated successfully, As expected test passed!!
+2025-05-26 02:25:44,541 INFO  tests.ProfilePageTest - =============== Verifying Display Name ===============
+2025-05-26 02:25:44,609 INFO  tests.ProfilePageTest - Name displayed in profile: Madhan Adithya
+2025-05-26 02:25:44,609 INFO  tests.ProfilePageTest - Profile name matches with data used to update!
+2025-05-26 02:25:44,609 INFO  tests.ProfilePageTest - =============== Verifying social links URLs ===============
+2025-05-26 02:25:48,116 INFO  tests.ProfilePageTest - LinkedIn URL opened: https://www.linkedin.com/authwall?trk=gf&trkInfo=AQElKGCf7JIpVgAAAZcJOvQgGJjdCsXJ6-UP3Jx2RvyNU0mUO5edMW4Us4UXa8yLeQU5FZDmbfbFGdKXvX61mOXZD_xFX-48X-tQ194NbJ1_oRHpCKm1axdjA62cew9MEGypkIE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmadhanadithya%2F
+2025-05-26 02:25:55,131 INFO  tests.ProfilePageTest - GitHub URL opened: https://github.com/madhanadithya/
+2025-05-26 02:25:55,132 INFO  tests.ProfilePageTest - Social links verified successfully, As expected test passed!
+2025-05-26 02:25:55,402 INFO  tests.SearchAndFilterTest - =============== search and filter feature testing ===============
+2025-05-26 02:25:55,404 INFO  tests.SearchAndFilterTest - Navigating to Striver's DSA sheet
+2025-05-26 02:26:01,569 INFO  tests.SearchAndFilterTest - =============== search test ===============
+2025-05-26 02:26:01,569 INFO  tests.SearchAndFilterTest - Performing search test
+2025-05-26 02:26:11,282 INFO  tests.SearchAndFilterTest - Search test completed successfully, As expected test passed!
+2025-05-26 02:26:11,351 INFO  tests.SearchAndFilterTest - =============== filter test ===============
+2025-05-26 02:26:11,380 INFO  tests.SearchAndFilterTest - Applying difficulty filter
+2025-05-26 02:26:17,730 INFO  tests.SearchAndFilterTest - Filter result: Hard
+2025-05-26 02:26:17,731 INFO  tests.SearchAndFilterTest - Filter test passed, As expected test passed!
